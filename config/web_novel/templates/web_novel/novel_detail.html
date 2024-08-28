@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+{% extends "web_novel/base.html" %}
+{% block content%}
+
+    <h3><a class="text-decoration-none text-black" href="{{novel.linked}}" target="_brank">{{novel.title}}</a></h3>
+    <p>
+        {{novel.work_name}}
+    </p>
+    <p>
+        {{novel.tag}}
+    </p>
+    <h6 class="card-text ">総文字数：{{novel.word_num}}文字</h6>
+    <p>
+        {{novel.summry}}
+    </p>
+    
+{%endblock content%}
+
+</body>
+</html>

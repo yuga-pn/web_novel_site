@@ -1,0 +1,46 @@
+{% load django_bootstrap5 %}
+<!DOCTYPE>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        {% bootstrap_css%}
+        {% bootstrap_javascript%}
+        <title> WebNovel </title>
+    </head>
+    <body>
+        <header class="container bg-secondary">
+            <div class="col text-center text-white">
+            <h1>
+                <a class="text-decoration-none text-white"  href="http://127.0.0.1:8000/">
+                Web小説記録
+                </a>
+            </h1>
+            <h4>ハーメルン、pixivにある二次創作のまとめです</h4>
+            </div>
+        </header>
+        <div class="container">
+            <div class="row">
+                <div class="col-9">
+                    {%block content%}
+                    {% endblock content%}
+                </div>
+                <div class="col-3 ">
+                    <h4>原作</h4>
+                    <li class="work_name">
+                        <a class="text-decoration-none text-black" href="http://127.0.0.1:8000/?query=%E3%82%BD%E3%83%BC%E3%83%89%E3%82%A2%E3%83%BC%E3%83%88%E3%82%AA%E3%83%B3%E3%83%A9%E3%82%A4%E3%83%B3">
+                            ソードアートオンライン</a>
+                    </li>
+                    <li class="work_name">
+                        <a class="text-decoration-none text-black" href="http://127.0.0.1:8000/?query=%E3%82%88%E3%81%86%E3%81%93%E3%81%9D%E5%AE%9F%E5%8A%9B%E4%B8%BB%E7%BE%A9%E3%81%AE%E6%95%99%E5%AE%A4%E3%81%B8">
+                            ようこそ実力主義の教室へ</a>
+                    </li>
+                    <li>
+                        <a class="text-decoration-none text-black" href="http://127.0.0.1:8000/?query=%E6%8E%A8%E3%81%97%E3%81%AE%E5%AD%90">
+                        推しの子</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
